@@ -57,17 +57,17 @@ class InterpSet(object):
         self.num_hess_pts = 0  # how many points have we got in the Hessian component so far?
 
         # Bounds (not used right now)
-        self.xl = np.full((self.n,), -1e20, dtype=np.float)
-        self.xu = np.full((self.n,), 1e20, dtype=np.float)
+        self.xl = np.full((self.n,), -1e20, dtype=float)
+        self.xu = np.full((self.n,), 1e20, dtype=float)
 
         # Interpolation points
         # All points are in the form (self.xbase + direction)
-        self.points = np.full((self.p+1, self.n), np.nan, dtype=np.float)  # main set of interpolation directions (for gradient)
+        self.points = np.full((self.p+1, self.n), np.nan, dtype=float)  # main set of interpolation directions (for gradient)
         self.points2 = None  # when add points, will be secondary set of Hessian interp points (size self.num_hess_pts, self.n)
         self.points[0,:] = x0
 
         # Function values
-        self.fvals = np.full((self.p+1,), np.inf, dtype=np.float)  # objective value for each row of self.points
+        self.fvals = np.full((self.p+1,), np.inf, dtype=float)  # objective value for each row of self.points
         self.fvals2 = None  # objective value for each row of self.points2
         self.fvals[0] = f0
 

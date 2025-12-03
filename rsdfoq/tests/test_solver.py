@@ -50,7 +50,7 @@ class TestRosenbrockGeneric(unittest.TestCase):
         # n, m = 2, 2
         x0 = np.array([-1.2, 1.0])
         np.random.seed(0)
-        soln = block_hess.solve(rosenbrock, x0, maxfun=1000)
+        soln = rsdfoq.solve(rosenbrock, x0, maxfun=1000)
         # print(soln)
         # print(rosenbrock_jacobian(soln.x))
         self.assertTrue(array_compare(soln.x, np.array([1.0, 1.0]), thresh=1e-4), "Wrong xmin")
@@ -123,7 +123,7 @@ class TestLinear(unittest.TestCase):
             xmin = np.linalg.lstsq(A, b)[0]  # newer NumPy doesn't allow rcond=None (but has correct default)
         fmin = objfun(xmin)
         x0 = np.zeros((n,))
-        soln = block_hess.solve(objfun, x0, maxfun=1000)
+        soln = rsdfoq.solve(objfun, x0, maxfun=1000)
         # print(soln)
         self.assertTrue(array_compare(soln.x, xmin, thresh=1e-2), "Wrong xmin")
         self.assertAlmostEqual(soln.f, fmin, places=7, msg="Wrong fmin")
@@ -143,7 +143,7 @@ class TestLinear2(unittest.TestCase):
             xmin = np.linalg.lstsq(A, b)[0]  # newer NumPy doesn't allow rcond=None (but has correct default)
         fmin = objfun(xmin)
         x0 = np.zeros((n,))
-        soln = block_hess.solve(objfun, x0)  # reduced space
+        soln = rsdfoq.solve(objfun, x0)  # reduced space
         # print(soln)
         self.assertTrue(array_compare(soln.x, xmin, thresh=1e-2), "Wrong xmin")
         self.assertAlmostEqual(soln.f, fmin, places=7, msg="Wrong fmin")
