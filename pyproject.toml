@@ -8,6 +8,7 @@ dynamic = ["version"]
 dependencies = [
     "setuptools",
     "numpy",
+    "scipy",
     "pandas"
 ]
 requires-python = ">=3.9"
