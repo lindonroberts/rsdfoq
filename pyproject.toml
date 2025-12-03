@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsdfoq"
+dynamic = ["version"]
+dependencies = [
+    "setuptools",
+    "numpy",
+    "pandas"
+]
+requires-python = ">=3.9"
+authors = [
+    {name = "Lindon Roberts", email = "lindon.roberts@unimelb.edu.au"}
+]
+maintainers = [
+    {name = "Lindon Roberts", email = "lindon.roberts@unimelb.edu.au"}
+]
+description = "A derivative-free solver for large-scale minimization"
+readme = "README.rst"
+license = {text = "GPL-3.0-or-later"}
+keywords = ["mathematics", "optimization", "least squares", "derivative free optimization", "nonlinear least squares"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Framework :: IPython",
+    "Framework :: Jupyter",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+trustregion = ["trustregion>=1.1"]
+
+[project.urls]
+Homepage = "https://github.com/lindonroberts/rsdfoq"
+Download = "https://github.com/lindonroberts/rsdfoq/releases/"
+"Bug Tracker" = "https://github.com/lindonroberts/rsdfoq/issues/"
+Documentation = "https://github.com/lindonroberts/rsdfoq"
+"Source Code" = "https://github.com/lindonroberts/rsdfoq"
+
+[tool.setuptools]
+packages = ["rsdfoq"]
+
+[tool.setuptools.dynamic]
+version = {attr = "rsdfoq.__version__"}
