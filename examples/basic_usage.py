@@ -24,10 +24,17 @@ x0 = np.array([-1.2, 1.0])
 # to ensure reproducibility
 np.random.seed(0)
 
+# For optional extra output details
+# import logging
+# logging.basicConfig(level=logging.INFO, format='%(message)s')
+
 # Perform the optimization, up to a maximum computational budget
 # (measured in maximum number of objective evaluations)
 soln = rsdfoq.solve(rosenbrock, x0, maxfun=1000)
 
 # Inspect the solution
-# Note: the actual minimizer is stored in soln.x
 print(soln)
+
+# Note: The 'soln' structure is defined in rsdfoq/exit_information.py
+# (class OptimResults)
+# e.g. minimizer stored in soln.x, minimum stored in soln.f
