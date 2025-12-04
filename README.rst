@@ -21,21 +21,17 @@ A preprint version of this paper can be `found on arXiv <https://arxiv.org/abs/2
 
 Installation
 ------------
-The easiest way to install RSDFO-Q is using PyPI:
+You can install RSDFO-Q by cloning this repository and installing with pip:
 
 .. code-block:: bash
 
-    $ pip install rsdfoq
-
-Alternatively, you can clone this repository and, assuming your working
-directory is the top-level directory of this repository (i.e. running :code:`ls`
-shows :code:`pyproject.toml`), and install RSDFO-Q locally using
-
-.. code-block:: bash
-
+    $ git clone https://github.com/lindonroberts/rsdfoq.git
+    $ cd rsdfoq
+    $ ls                     <-- check for pyproject.toml
     $ pip install -e .
 
-RSDFO-Q requires NumPy, SciPy and pandas.
+RSDFO-Q requires NumPy, SciPy and pandas, but these will be installed automatically
+if they are not already available.
 
 Usage
 -----
