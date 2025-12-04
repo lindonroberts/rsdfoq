@@ -106,7 +106,7 @@ class OptimResults(object):
 
     def __str__(self):
         # Result of calling print(soln)
-        output = "****** Block Py-BOBYQA Results ******\n"
+        output = "****** RSDFO-Q Results ******\n"
         if self.flag != self.EXIT_INPUT_ERROR:
             if np.size(self.x) < 200:
                 output += "Solution xmin = %s\n" % str(self.x)
