@@ -2,6 +2,14 @@
 RSDFO-Q: Randomized Subpsace DFO with Quadratic Models
 ======================================================
 
+.. image::  https://github.com/lindonroberts/rsdfoq/actions/workflows/unit_tests.yml/badge.svg
+   :target: https://github.com/lindonroberts/rsdfoq/actions
+   :alt: Build Status
+
+.. image::  https://img.shields.io/badge/License-GPL%20v3-blue.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0
+   :alt: GNU GPL v3 License
+
 A Python package for general minimization, where derivatives
 are not available, using random subspaces.
 For a description of this algorithm, see `this paper <https://arxiv.org/abs/2412.14431>`_.
