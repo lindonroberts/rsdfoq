@@ -1,5 +1,5 @@
 ======================================================
-RSDFO-Q: Randomized Subpsace DFO with Quadratic Models
+RSDFO-Q: Randomized Subspace DFO with Quadratic Models
 ======================================================
 
 .. image::  https://github.com/lindonroberts/rsdfoq/actions/workflows/unit_tests.yml/badge.svg
